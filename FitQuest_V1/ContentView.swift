@@ -1,17 +1,28 @@
-//
-//  ContentView.swift
-//  FitQuest_V1
-//
-//  Created by Sophie McQuain on 3/25/21.
-//
-
 import SwiftUI
 
-struct ContentView: View {
+struct ContentView : View {
     var body: some View {
-        Text("FitQuest")
-            .multilineTextAlignment(.center)
-            .padding()
+        NavigationView {
+            VStack {
+                Text("Fit Quest")
+                    .font(.largeTitle)
+                    .fontWeight(.medium)
+                    .foregroundColor(Color.blue)
+                Spacer()
+                NavigationLink(destination: MainLanding()) {
+                    Text("Login")
+                    .padding()
+                    .foregroundColor(.red)
+                    .font(.title)
+            }
+            NavigationLink(destination: CharacterCreation()) {
+                    Text("Sign Up")
+                    .padding()
+                    .foregroundColor(.red)
+                    .font(.title)
+            }
+          }
+        }
     }
 }
 

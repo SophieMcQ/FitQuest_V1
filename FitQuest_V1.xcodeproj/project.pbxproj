@@ -11,6 +11,15 @@
 		E4432268260D3331002206F5 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4432267260D3331002206F5 /* ContentView.swift */; };
 		E443226A260D3332002206F5 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E4432269260D3332002206F5 /* Assets.xcassets */; };
 		E443226D260D3332002206F5 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E443226C260D3332002206F5 /* Preview Assets.xcassets */; };
+		E4432277260D562A002206F5 /* MainLanding.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4432276260D562A002206F5 /* MainLanding.swift */; };
+		E4432279260D5B38002206F5 /* SocialHub.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4432278260D5B38002206F5 /* SocialHub.swift */; };
+		E443227B260D5BE2002206F5 /* Tournament.swift in Sources */ = {isa = PBXBuildFile; fileRef = E443227A260D5BE2002206F5 /* Tournament.swift */; };
+		E443227D260D5CEB002206F5 /* Stats.swift in Sources */ = {isa = PBXBuildFile; fileRef = E443227C260D5CEB002206F5 /* Stats.swift */; };
+		E443227F260D5CFA002206F5 /* Settings.swift in Sources */ = {isa = PBXBuildFile; fileRef = E443227E260D5CFA002206F5 /* Settings.swift */; };
+		E4432281260D5EAF002206F5 /* CharacterCreation.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4432280260D5EAF002206F5 /* CharacterCreation.swift */; };
+		E4432285260D6045002206F5 /* NewsFeed.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4432284260D6045002206F5 /* NewsFeed.swift */; };
+		E4432287260D6052002206F5 /* DirectMessages.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4432286260D6052002206F5 /* DirectMessages.swift */; };
+		E4432289260D6068002206F5 /* GroupCenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4432288260D6068002206F5 /* GroupCenter.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -20,6 +29,15 @@
 		E4432269260D3332002206F5 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		E443226C260D3332002206F5 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		E443226E260D3333002206F5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		E4432276260D562A002206F5 /* MainLanding.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainLanding.swift; sourceTree = "<group>"; };
+		E4432278260D5B38002206F5 /* SocialHub.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SocialHub.swift; sourceTree = "<group>"; };
+		E443227A260D5BE2002206F5 /* Tournament.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tournament.swift; sourceTree = "<group>"; };
+		E443227C260D5CEB002206F5 /* Stats.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Stats.swift; sourceTree = "<group>"; };
+		E443227E260D5CFA002206F5 /* Settings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Settings.swift; sourceTree = "<group>"; };
+		E4432280260D5EAF002206F5 /* CharacterCreation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharacterCreation.swift; sourceTree = "<group>"; };
+		E4432284260D6045002206F5 /* NewsFeed.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsFeed.swift; sourceTree = "<group>"; };
+		E4432286260D6052002206F5 /* DirectMessages.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DirectMessages.swift; sourceTree = "<group>"; };
+		E4432288260D6068002206F5 /* GroupCenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GroupCenter.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -52,8 +70,14 @@
 		E4432264260D3331002206F5 /* FitQuest_V1 */ = {
 			isa = PBXGroup;
 			children = (
+				E443228A260D6095002206F5 /* Social Pages */,
 				E4432265260D3331002206F5 /* FitQuest_V1App.swift */,
 				E4432267260D3331002206F5 /* ContentView.swift */,
+				E4432276260D562A002206F5 /* MainLanding.swift */,
+				E4432280260D5EAF002206F5 /* CharacterCreation.swift */,
+				E443227C260D5CEB002206F5 /* Stats.swift */,
+				E443227E260D5CFA002206F5 /* Settings.swift */,
+				E443227A260D5BE2002206F5 /* Tournament.swift */,
 				E4432269260D3332002206F5 /* Assets.xcassets */,
 				E443226E260D3333002206F5 /* Info.plist */,
 				E443226B260D3332002206F5 /* Preview Content */,
@@ -67,6 +91,17 @@
 				E443226C260D3332002206F5 /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		E443228A260D6095002206F5 /* Social Pages */ = {
+			isa = PBXGroup;
+			children = (
+				E4432278260D5B38002206F5 /* SocialHub.swift */,
+				E4432288260D6068002206F5 /* GroupCenter.swift */,
+				E4432286260D6052002206F5 /* DirectMessages.swift */,
+				E4432284260D6045002206F5 /* NewsFeed.swift */,
+			);
+			path = "Social Pages";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -138,8 +173,17 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E4432287260D6052002206F5 /* DirectMessages.swift in Sources */,
+				E4432279260D5B38002206F5 /* SocialHub.swift in Sources */,
+				E443227D260D5CEB002206F5 /* Stats.swift in Sources */,
+				E4432289260D6068002206F5 /* GroupCenter.swift in Sources */,
 				E4432268260D3331002206F5 /* ContentView.swift in Sources */,
 				E4432266260D3331002206F5 /* FitQuest_V1App.swift in Sources */,
+				E4432281260D5EAF002206F5 /* CharacterCreation.swift in Sources */,
+				E443227F260D5CFA002206F5 /* Settings.swift in Sources */,
+				E4432285260D6045002206F5 /* NewsFeed.swift in Sources */,
+				E4432277260D562A002206F5 /* MainLanding.swift in Sources */,
+				E443227B260D5BE2002206F5 /* Tournament.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
