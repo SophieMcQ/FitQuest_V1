@@ -20,9 +20,13 @@
 		E4432285260D6045002206F5 /* NewsFeed.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4432284260D6045002206F5 /* NewsFeed.swift */; };
 		E4432287260D6052002206F5 /* DirectMessages.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4432286260D6052002206F5 /* DirectMessages.swift */; };
 		E4432289260D6068002206F5 /* GroupCenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4432288260D6068002206F5 /* GroupCenter.swift */; };
+		E443228C260FC328002206F5 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = E443228B260FC328002206F5 /* GoogleService-Info.plist */; };
+		FEF9357C3E1875E810D5518F /* Pods_FitQuest_V1.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = ACD13BEF074A17F732A8B5D6 /* Pods_FitQuest_V1.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		48890B08FFBE2AAE9FBD9DB9 /* Pods-FitQuest_V1.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FitQuest_V1.debug.xcconfig"; path = "Target Support Files/Pods-FitQuest_V1/Pods-FitQuest_V1.debug.xcconfig"; sourceTree = "<group>"; };
+		ACD13BEF074A17F732A8B5D6 /* Pods_FitQuest_V1.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_FitQuest_V1.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		E4432262260D3331002206F5 /* FitQuest_V1.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FitQuest_V1.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E4432265260D3331002206F5 /* FitQuest_V1App.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FitQuest_V1App.swift; sourceTree = "<group>"; };
 		E4432267260D3331002206F5 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -38,6 +42,8 @@
 		E4432284260D6045002206F5 /* NewsFeed.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsFeed.swift; sourceTree = "<group>"; };
 		E4432286260D6052002206F5 /* DirectMessages.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DirectMessages.swift; sourceTree = "<group>"; };
 		E4432288260D6068002206F5 /* GroupCenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GroupCenter.swift; sourceTree = "<group>"; };
+		E443228B260FC328002206F5 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "../../../Downloads/GoogleService-Info.plist"; sourceTree = "<group>"; };
+		EB2C59878D321869EE08597A /* Pods-FitQuest_V1.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FitQuest_V1.release.xcconfig"; path = "Target Support Files/Pods-FitQuest_V1/Pods-FitQuest_V1.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -45,17 +51,28 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FEF9357C3E1875E810D5518F /* Pods_FitQuest_V1.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		004E4D2E929CE9CB9D7106DD /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				ACD13BEF074A17F732A8B5D6 /* Pods_FitQuest_V1.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		E4432259260D3331002206F5 = {
 			isa = PBXGroup;
 			children = (
 				E4432264260D3331002206F5 /* FitQuest_V1 */,
 				E4432263260D3331002206F5 /* Products */,
+				FAB37E102A69C2FBED6DD641 /* Pods */,
+				004E4D2E929CE9CB9D7106DD /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -70,6 +87,7 @@
 		E4432264260D3331002206F5 /* FitQuest_V1 */ = {
 			isa = PBXGroup;
 			children = (
+				E443228B260FC328002206F5 /* GoogleService-Info.plist */,
 				E443228A260D6095002206F5 /* Social Pages */,
 				E4432265260D3331002206F5 /* FitQuest_V1App.swift */,
 				E4432267260D3331002206F5 /* ContentView.swift */,
@@ -104,6 +122,16 @@
 			path = "Social Pages";
 			sourceTree = "<group>";
 		};
+		FAB37E102A69C2FBED6DD641 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				48890B08FFBE2AAE9FBD9DB9 /* Pods-FitQuest_V1.debug.xcconfig */,
+				EB2C59878D321869EE08597A /* Pods-FitQuest_V1.release.xcconfig */,
+			);
+			name = Pods;
+			path = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -111,9 +139,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = E4432271260D3333002206F5 /* Build configuration list for PBXNativeTarget "FitQuest_V1" */;
 			buildPhases = (
+				6CFC184B483CFEAE47E837FD /* [CP] Check Pods Manifest.lock */,
 				E443225E260D3331002206F5 /* Sources */,
 				E443225F260D3331002206F5 /* Frameworks */,
 				E4432260260D3331002206F5 /* Resources */,
+				D4B5B05FDC77C9C82B8CE3C1 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -163,10 +193,53 @@
 			files = (
 				E443226D260D3332002206F5 /* Preview Assets.xcassets in Resources */,
 				E443226A260D3332002206F5 /* Assets.xcassets in Resources */,
+				E443228C260FC328002206F5 /* GoogleService-Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		6CFC184B483CFEAE47E837FD /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-FitQuest_V1-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		D4B5B05FDC77C9C82B8CE3C1 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-FitQuest_V1/Pods-FitQuest_V1-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-FitQuest_V1/Pods-FitQuest_V1-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-FitQuest_V1/Pods-FitQuest_V1-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		E443225E260D3331002206F5 /* Sources */ = {
@@ -308,6 +381,7 @@
 		};
 		E4432272260D3333002206F5 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 48890B08FFBE2AAE9FBD9DB9 /* Pods-FitQuest_V1.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -329,6 +403,7 @@
 		};
 		E4432273260D3333002206F5 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = EB2C59878D321869EE08597A /* Pods-FitQuest_V1.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
