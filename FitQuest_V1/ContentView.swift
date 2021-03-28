@@ -16,7 +16,7 @@ struct ContentView : View {
                     .font(.title)
             }
             NavigationLink(destination: CharacterCreation()) {
-                    Text("Sign Up")
+                    Text("Sign In")
                     .padding()
                     .foregroundColor(.blue)
                     .font(.title)
