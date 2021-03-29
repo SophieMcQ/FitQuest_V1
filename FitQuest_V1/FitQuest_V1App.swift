@@ -8,6 +8,8 @@
 import SwiftUI
 import FirebaseAuth
 import Firebase
+import FirebaseCore
+import FirebaseFirestore
 
 @main
 struct FitQuest_V1App: App {

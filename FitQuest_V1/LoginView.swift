@@ -43,18 +43,21 @@ struct LoginView: View {
                 }
                 .padding(/*@START_MENU_TOKEN@*/.all, 20.0/*@END_MENU_TOKEN@*/)
                 .background(/*@START_MENU_TOKEN@*//*@PLACEHOLDER=View@*/Color.orange/*@END_MENU_TOKEN@*/)
-                Button("Create Account") {
-                    
+                
+                
+                NavigationLink(destination: Register()) {
+                    Text("New User")
+                        .fontWeight(.bold)
+                        .foregroundColor(.white)
+                        .font(.title2)
                 }
-                .padding(/*@START_MENU_TOKEN@*/.all, 10.0/*@END_MENU_TOKEN@*/)
-                .background(/*@START_MENU_TOKEN@*//*@PLACEHOLDER=View@*/Color.orange/*@END_MENU_TOKEN@*/)
                 Spacer()
                 
                 NavigationLink(destination: MainLanding(), isActive: $pushActive) {
                     EmptyView()
                   }.hidden()
-            }
-        )
+                }
+            )
         
         
         

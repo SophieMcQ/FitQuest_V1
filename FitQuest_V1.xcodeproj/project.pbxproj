@@ -21,9 +21,9 @@
 		E4432287260D6052002206F5 /* DirectMessages.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4432286260D6052002206F5 /* DirectMessages.swift */; };
 		E4432289260D6068002206F5 /* GroupCenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4432288260D6068002206F5 /* GroupCenter.swift */; };
 		E443228C260FC328002206F5 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = E443228B260FC328002206F5 /* GoogleService-Info.plist */; };
-		E4488CBC261151AA00C5A7ED /* RegisterViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4488CBB261151AA00C5A7ED /* RegisterViewModel.swift */; };
 		E4EFBDF12611390F00F7A32D /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4EFBDF02611390F00F7A32D /* LoginView.swift */; };
-		E4EFBDF32611463F00F7A32D /* LoginViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4EFBDF22611463F00F7A32D /* LoginViewModel.swift */; };
+		E4F4915E2611761600099704 /* Register.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4F4915D2611761600099704 /* Register.swift */; };
+		E4F4916026118F6500099704 /* RegistrationMetrics.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4F4915F26118F6500099704 /* RegistrationMetrics.swift */; };
 		FEF9357C3E1875E810D5518F /* Pods_FitQuest_V1.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = ACD13BEF074A17F732A8B5D6 /* Pods_FitQuest_V1.framework */; };
 /* End PBXBuildFile section */
 
@@ -46,9 +46,9 @@
 		E4432286260D6052002206F5 /* DirectMessages.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DirectMessages.swift; sourceTree = "<group>"; };
 		E4432288260D6068002206F5 /* GroupCenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GroupCenter.swift; sourceTree = "<group>"; };
 		E443228B260FC328002206F5 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "../../../Downloads/GoogleService-Info.plist"; sourceTree = "<group>"; };
-		E4488CBB261151AA00C5A7ED /* RegisterViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterViewModel.swift; sourceTree = "<group>"; };
 		E4EFBDF02611390F00F7A32D /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
-		E4EFBDF22611463F00F7A32D /* LoginViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewModel.swift; sourceTree = "<group>"; };
+		E4F4915D2611761600099704 /* Register.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Register.swift; sourceTree = "<group>"; };
+		E4F4915F26118F6500099704 /* RegistrationMetrics.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegistrationMetrics.swift; sourceTree = "<group>"; };
 		EB2C59878D321869EE08597A /* Pods-FitQuest_V1.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FitQuest_V1.release.xcconfig"; path = "Target Support Files/Pods-FitQuest_V1/Pods-FitQuest_V1.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -98,8 +98,8 @@
 				E4432265260D3331002206F5 /* FitQuest_V1App.swift */,
 				E4432267260D3331002206F5 /* ContentView.swift */,
 				E4EFBDF02611390F00F7A32D /* LoginView.swift */,
-				E4EFBDF22611463F00F7A32D /* LoginViewModel.swift */,
-				E4488CBB261151AA00C5A7ED /* RegisterViewModel.swift */,
+				E4F4915D2611761600099704 /* Register.swift */,
+				E4F4915F26118F6500099704 /* RegistrationMetrics.swift */,
 				E4432269260D3332002206F5 /* Assets.xcassets */,
 				E443226E260D3333002206F5 /* Info.plist */,
 				E443226B260D3332002206F5 /* Preview Content */,
@@ -255,16 +255,16 @@
 			buildActionMask = 2147483647;
 			files = (
 				E4432287260D6052002206F5 /* DirectMessages.swift in Sources */,
-				E4EFBDF32611463F00F7A32D /* LoginViewModel.swift in Sources */,
 				E4432279260D5B38002206F5 /* SocialHub.swift in Sources */,
 				E443227D260D5CEB002206F5 /* Stats.swift in Sources */,
 				E4432289260D6068002206F5 /* GroupCenter.swift in Sources */,
+				E4F4915E2611761600099704 /* Register.swift in Sources */,
 				E4432268260D3331002206F5 /* ContentView.swift in Sources */,
 				E4432266260D3331002206F5 /* FitQuest_V1App.swift in Sources */,
 				E4EFBDF12611390F00F7A32D /* LoginView.swift in Sources */,
 				E4432281260D5EAF002206F5 /* CharacterCreation.swift in Sources */,
-				E4488CBC261151AA00C5A7ED /* RegisterViewModel.swift in Sources */,
 				E443227F260D5CFA002206F5 /* Settings.swift in Sources */,
+				E4F4916026118F6500099704 /* RegistrationMetrics.swift in Sources */,
 				E4432285260D6045002206F5 /* NewsFeed.swift in Sources */,
 				E4432277260D562A002206F5 /* MainLanding.swift in Sources */,
 				E443227B260D5BE2002206F5 /* Tournament.swift in Sources */,
