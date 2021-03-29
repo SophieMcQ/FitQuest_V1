@@ -7,5 +7,6 @@ target 'FitQuest_V1' do
 
   # Pods for FitQuest_V1
 pod 'Firebase'
+pod 'Firebase/Auth'
 
 end
