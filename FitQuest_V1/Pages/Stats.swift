@@ -6,10 +6,20 @@
 //
 
 import SwiftUI
+import Firebase
 
 struct Stats: View {
+    
+    let d = Firestore.firestore()
+    @State private var name: String = ""
+    @State private var weight: String = ""
+    @State private var height: String = ""
+    @State private var age: String = ""
+    
     var body: some View {
-        Text("Stats")
+        Text("My Stats")
+        
+        
     }
 }
 

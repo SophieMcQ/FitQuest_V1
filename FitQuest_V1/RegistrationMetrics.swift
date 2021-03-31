@@ -18,11 +18,16 @@ struct RegistrationMetrics: View {
     @State private var height: String = ""
     @State private var age: String = ""
     @State private var gender: String = "Female"
+    
     var genders = ["Female", "Male", "Other"]
+    
+   
     
     let d = Firestore.firestore()
     
     var body: some View {
+        
+        NavigationView{
         VStack{
             Text("User Metrics")
                 .font(.largeTitle)
@@ -81,18 +86,17 @@ struct RegistrationMetrics: View {
                     //must be added later to database, nothing being done with this currently
                     print("success")
                     
-                    var ref: DocumentReference? = nil
-                    ref = d.collection("users").addDocument(data: [
-                        "weight": weight,
+                    d.collection("users").document(UserDefaults.standard.string(forKey: "email") ?? "").setData([
+                        "name": UserDefaults.standard.string(forKey: "name") ?? "",
                         "height": height,
+                        "weight": weight,
                         "age": age,
-                        "gender": gender,
-                        
+                        "gender": gender
                     ]) { err in
                         if let err = err {
-                            print("Error adding document: \(err)")
+                            print("Error writing document: \(err)")
                         } else {
-                            print("Document added with ID: \(ref!.documentID)")
+                            print("User Updated!")
                         }
                     }
                     
@@ -104,6 +108,7 @@ struct RegistrationMetrics: View {
             }.hidden().background(/*@START_MENU_TOKEN@*//*@PLACEHOLDER=View@*/Color.orange/*@END_MENU_TOKEN@*/)
             .frame(width: 150.0, height: 50.0)
             
+            }   
         }
     }
 }

@@ -21,13 +21,9 @@ struct Register: View {
     
     static var userKey = ""
     
-    let d = Firestore.firestore()
-    
-    var ref: DocumentReference? = nil
-    
     
     var body: some View {
-        
+        NavigationView{
         VStack{
             Spacer()
             Group{
@@ -64,28 +60,21 @@ struct Register: View {
                         errorMessage = "Passwords must be the same"
                     }
                     else {
-                        Auth.auth().createUser(withEmail: email, password: password) { (result, error) in
+                        
+                        //creates user authentication
+                        Auth.auth().createUser(withEmail: email, password: password){ (result, error) in
                             if error != nil {
-                                errorMessage = error.debugDescription
+                                errorMessage = "Enter valid email and password";
                             } else {
-                                var ref: DocumentReference? = nil
-                                ref = d.collection("users").addDocument(data: [
-                                    "name": name,
-                                    "email": email,
-                                    "password": password,
-                                ]) { err in
-                                    if let err = err {
-                                        print("Error adding document: \(err)")
-                                    } else {
-                                        print("Document added with ID: \(ref!.documentID)")
-                                    }
-                                    
-                                    
-                                }
                                 self.pushActive = true
-                                print("User Added")
+                                
+                                //Sets UserDefaults to the user's email for easier login
+                                UserDefaults.standard.setValue(email, forKey: "email")
+                                UserDefaults.standard.setValue(name, forKey: "name")
+
                             }
                         }
+                    
                     }
                     
                 }
@@ -97,6 +86,7 @@ struct Register: View {
                 NavigationLink(destination: RegistrationMetrics(), isActive: $pushActive) {
                     EmptyView()
                 }.hidden().background(/*@START_MENU_TOKEN@*//*@PLACEHOLDER=View@*/Color.orange/*@END_MENU_TOKEN@*/)
+                }
             }
         }
     }

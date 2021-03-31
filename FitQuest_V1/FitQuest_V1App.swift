@@ -14,7 +14,7 @@ import FirebaseFirestore
 @main
 struct FitQuest_V1App: App {
     init() {
-            FirebaseApp.configure()
+        FirebaseApp.configure()
     }
     var body: some Scene {
         WindowGroup {
