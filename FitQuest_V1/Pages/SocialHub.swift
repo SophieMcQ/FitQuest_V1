@@ -8,6 +8,7 @@
 import SwiftUI
 
 struct SocialHub: View {
+    @EnvironmentObject var user : User
     var body: some View {
         VStack(spacing: 30.0){
             Text("Social Hub")

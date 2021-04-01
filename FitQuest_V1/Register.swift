@@ -17,8 +17,10 @@ struct Register: View {
     @State private var passwordCheck: String = ""
     @State private var errorMessage: String = ""
     
-    @State var pushActive = false
+    let d = Firestore.firestore()
+    @EnvironmentObject var user : User
     
+    @State var pushActive = false
     static var userKey = ""
     
     
@@ -60,37 +62,37 @@ struct Register: View {
                         errorMessage = "Passwords must be the same"
                     }
                     else {
-                        
-                        //creates user authentication
-                        Auth.auth().createUser(withEmail: email, password: password){ (result, error) in
-                            if error != nil {
-                                errorMessage = "Enter valid email and password";
-                            } else {
-                                self.pushActive = true
-                                
-                                //Sets UserDefaults to the user's email for easier login
-                                UserDefaults.standard.setValue(email, forKey: "email")
-                                UserDefaults.standard.setValue(name, forKey: "name")
-
-                            }
+                        let docRef = d.collection("users").document(email)
+                        docRef.getDocument() { (document, error) in
+                        if error != nil {
+                            print(error?.localizedDescription ?? "")
+                          }
+                        else {
+                            print("Valid email")
+                            UserDefaults.standard.setValue(email, forKey: "email")
+                            UserDefaults.standard.setValue(name, forKey: "name")
+                            UserDefaults.standard.setValue(password, forKey: "password")
+                            
+                            self.pushActive = true
+                          }
                         }
-                    
                     }
                     
                 }
+                    
                 .padding(/*@START_MENU_TOKEN@*/.all, 10.0/*@END_MENU_TOKEN@*/)
                 .background(/*@START_MENU_TOKEN@*//*@PLACEHOLDER=View@*/Color.orange/*@END_MENU_TOKEN@*/)
-                
+        }
                 Spacer()
                 
-                NavigationLink(destination: RegistrationMetrics(), isActive: $pushActive) {
+                NavigationLink(destination: RegistrationMetrics().environmentObject(user).navigationBarHidden(true), isActive: $pushActive) {
                     EmptyView()
                 }.hidden().background(/*@START_MENU_TOKEN@*//*@PLACEHOLDER=View@*/Color.orange/*@END_MENU_TOKEN@*/)
                 }
             }
         }
     }
-}
+
 
 struct Register_Previews: PreviewProvider {
     static var previews: some View {

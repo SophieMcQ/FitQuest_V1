@@ -6,15 +6,11 @@ import CoreLocation
 // Your starting view
 struct ContentView: View {
 
-    @State var loggedIn = UserDefaults.standard.bool(forKey: "email")
-
+    let user = User()
     var body: some View {
         
-        if !loggedIn {
-            LoginView()
-        } else {
-            MainLanding()
-        }
+        LoginView().environmentObject(user)
+
     }
 }
 

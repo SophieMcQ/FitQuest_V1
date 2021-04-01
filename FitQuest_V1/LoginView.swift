@@ -14,8 +14,8 @@ struct LoginView: View {
     @State private var password: String = ""
     @State private var errorMessage: String = ""
     @State var pushActive = false
-    @State var loggedIn = UserDefaults.standard.bool(forKey: "email")
-    
+
+    @EnvironmentObject var user : User
     
     var body: some View {
         VStack{
@@ -45,20 +45,20 @@ struct LoginView: View {
                             if error != nil {
                                 errorMessage = "Invalid email or password";
                             } else {
+                                user.setUser(email: email)
                                 self.pushActive = true
-                                UserDefaults.standard.setValue(email, forKey: "email")
                                 print("handleSuccessfullLogin")
                             }
                 }
-                }
+            }
                 .padding(/*@START_MENU_TOKEN@*/.all, 20.0/*@END_MENU_TOKEN@*/)
                 .background(/*@START_MENU_TOKEN@*//*@PLACEHOLDER=View@*/Color.orange/*@END_MENU_TOKEN@*/)
                 
-                NavigationLink(destination: MainLanding(), isActive: $pushActive) {
+                NavigationLink(destination: MainLanding().navigationBarHidden(true).environmentObject(user), isActive: $pushActive) {
                     EmptyView()
                 }.hidden()
                 
-                NavigationLink(destination: Register()) {
+                NavigationLink(destination: Register().environmentObject(user).navigationBarHidden(true)) {
                     Text("New User")
                         .fontWeight(.bold)
                         .foregroundColor(.white)

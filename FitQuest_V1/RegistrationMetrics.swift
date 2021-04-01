@@ -21,7 +21,7 @@ struct RegistrationMetrics: View {
     
     var genders = ["Female", "Male", "Other"]
     
-   
+    @EnvironmentObject var user : User
     
     let d = Firestore.firestore()
     
@@ -86,24 +86,20 @@ struct RegistrationMetrics: View {
                     //must be added later to database, nothing being done with this currently
                     print("success")
                     
-                    d.collection("users").document(UserDefaults.standard.string(forKey: "email") ?? "").setData([
-                        "name": UserDefaults.standard.string(forKey: "name") ?? "",
-                        "height": height,
-                        "weight": weight,
-                        "age": age,
-                        "gender": gender
-                    ]) { err in
-                        if let err = err {
-                            print("Error writing document: \(err)")
-                        } else {
-                            print("User Updated!")
-                        }
+                    Auth.auth().createUser(withEmail: UserDefaults.standard.string(forKey: "email") ?? "", password: UserDefaults.standard.string(forKey: "password") ?? "")
+                    { (result, error) in
+                            if error != nil {
+                                print("Error creating user account")
+                            } else {
+                                print("userAdded")
+                                user.newUser(email: UserDefaults.standard.string(forKey: "email") ?? "", name: UserDefaults.standard.string(forKey: "name") ?? "", height: height, weight: weight, age: age, gender: gender)
+                                pushActive = true
+                            }
                     }
                     
-                    pushActive = true
                 }
             }
-            NavigationLink(destination: MainLanding(), isActive: $pushActive) {
+            NavigationLink(destination: MainLanding().environmentObject(user).navigationBarHidden(true), isActive: $pushActive) {
                 EmptyView()
             }.hidden().background(/*@START_MENU_TOKEN@*//*@PLACEHOLDER=View@*/Color.orange/*@END_MENU_TOKEN@*/)
             .frame(width: 150.0, height: 50.0)

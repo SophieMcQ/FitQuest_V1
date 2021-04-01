@@ -8,8 +8,32 @@
 import SwiftUI
 
 struct Settings: View {
+    
+    @EnvironmentObject var user : User
+    @State var pushActive = false
+    
     var body: some View {
-        Text("Settings")
+        NavigationView{
+            VStack{
+                Text("Settings")
+                Spacer()
+                Button("Log Out"){
+                    user.logOut()
+                    pushActive = true
+                }
+                
+                Button("Delete Account"){
+                    user.deleteAccount()
+                    pushActive = true
+                }
+                Spacer()
+                NavigationLink(destination: LoginView().navigationBarHidden(true), isActive: $pushActive) {
+                    EmptyView()
+                }.hidden()
+                
+            }
+            
+        }
     }
 }
 

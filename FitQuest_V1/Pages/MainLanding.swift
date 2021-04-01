@@ -8,28 +8,31 @@
 import SwiftUI
 
 struct MainLanding: View {
+    
+    @EnvironmentObject var user : User
+    
     var body: some View {
         VStack(spacing: 30.0){
             Text("Main Landing")
                 .font(.title)
                 .fontWeight(.bold)
-            NavigationLink(destination: SocialHub()) {
+            NavigationLink(destination: SocialHub().environmentObject(user)) {
                 Text("Social Hub")
                 .foregroundColor(.black)
                     .font(.title3)
             }
-            NavigationLink(destination: Tournament()) {
+            NavigationLink(destination: Tournament().environmentObject(user)) {
                 Text("Tournament")
                 .foregroundColor(.black)
                     .font(.title3)
             }
-            NavigationLink(destination: Stats()) {
+            NavigationLink(destination: Stats().environmentObject(user)) {
                 Text("Stats")
                 .foregroundColor(.black)
                     .font(.title3)
             }
             
-            NavigationLink(destination: Settings()) {
+            NavigationLink(destination: Settings().environmentObject(user)) {
                 Text("Settings")
                 .foregroundColor(.black)
                     .font(.title3)

@@ -10,17 +10,33 @@ import Firebase
 
 struct Stats: View {
     
-    let d = Firestore.firestore()
-    @State private var name: String = ""
-    @State private var weight: String = ""
-    @State private var height: String = ""
-    @State private var age: String = ""
+    @EnvironmentObject var user : User
+    
+    @State var name: String = ""
+    @State var weight: String = ""
+    @State var height: String = ""
+    @State var age: String = ""
     
     var body: some View {
-        Text("My Stats")
         
+        VStack{
+            Text("Stats")
+            
+            Text("Hi ") + Text(user.toString(id: "name")) + Text("!")
+            
+            Text("Weight: ") + Text(user.toString(id: "height"))
+            Text("Height: ") + Text(user.toString(id: "weight"))
+            Text("Age: ") + Text(user.toString(id: "age"))
+            
+        }
         
     }
+}
+
+func getStats() -> Void{
+    let d = Firestore.firestore()
+    d.collection("users").document(UserDefaults.standard.string(forKey: "email") ?? "")
+    
 }
 
 struct Stats_Previews: PreviewProvider {

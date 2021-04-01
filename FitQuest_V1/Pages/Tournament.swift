@@ -8,6 +8,7 @@
 import SwiftUI
 
 struct Tournament: View {
+    @EnvironmentObject var user : User
     var body: some View {
         Text("Tournament")
     }
